@@ -5,6 +5,9 @@ import {
   Button,
   Divider,
   Stack,
+  CardActions,
+  CardMedia,
+  Card,
 } from "@mui/material";
 import Image1 from "../../assets/ecommerce-website.svg";
 import Image2 from "../../assets/Images-bro.svg";
@@ -13,15 +16,6 @@ import Image3 from "../../assets/service.svg";
 const data = [
   {
     id: 1,
-    image: Image2,
-    title: "Gallery website",
-    description:
-      "Dynamic website with CRUD functionalities using Javascript and Node JS for back-end",
-    github: "https://github.com/stevenabuan/kumpas",
-    demo: "https://kumpas.herokuapp.com/",
-  },
-  {
-    id: 2,
     image: Image1,
     title: "Ecommerce website",
     description:
@@ -29,6 +23,16 @@ const data = [
     github: "https://github.com/stevenabuan/kumpas",
     demo: "https://kumpas.herokuapp.com/",
   },
+  {
+    id: 2,
+    image: Image2,
+    title: "Gallery website",
+    description:
+      "Dynamic website with CRUD functionalities using Javascript and Node JS for back-end",
+    github: "https://github.com/stevenabuan/kumpas",
+    demo: "https://kumpas.herokuapp.com/",
+  },
+
   {
     id: 3,
     image: Image3,
@@ -46,7 +50,7 @@ const Portfolio = () => {
       <Stack marginTop={6} fontSize="1.5rem" marginBottom={2}>
         Portfolio
       </Stack>
-      <Grid container direction="row" justifyContent="center" marginBottom={8}>
+      <Grid container spacing={2} justifyContent="center" marginBottom={8}>
         {data.map((data) => {
           const { id, image, title, description, github, demo } = data;
           return (
@@ -56,45 +60,57 @@ const Portfolio = () => {
               md={6}
               lg={4}
               key={id}
-              border="solid 1px #fff"
               sx={{
                 borderRadius: "0",
               }}
             >
-              <img
-                style={{ height: "15rem", minWidth: "24rem" }}
-                src={image}
-                alt={title}
-              />
-              <CardContent>
-                <Stack fontSize="1.2rem">{title}</Stack>
-                <Stack>{description}</Stack>
-              </CardContent>
-
-              <Stack
-                direction="row"
-                padding={2}
-                sx={{ justifyContent: "center", columnGap: "1rem" }}
+              <Card
+                sx={{
+                  backgroundColor: "transparent",
+                  color: "#fff",
+                  boxShadow: "3",
+                  border: "1px solid #fff",
+                }}
               >
-                <Button
-                  target="_blank"
-                  size="small"
-                  variant="outlined"
-                  color="inherit"
-                  href={github}
+                <CardMedia
+                  component="img"
+                  alt={title}
+                  height="200"
+                  image={image}
+                />
+                <CardContent>
+                  <p style={{ fontSize: "1.5rem", marginBottom: "0.5rem" }}>
+                    {title}
+                  </p>
+                  <p>{description}</p>
+                </CardContent>
+                <CardActions
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    marginY: "0.8rem",
+                  }}
                 >
-                  Github
-                </Button>
-                <Button
-                  target="_blank"
-                  size="small"
-                  variant="contained"
-                  color="warning"
-                  href={demo}
-                >
-                  Live Demo
-                </Button>
-              </Stack>
+                  <Button
+                    variant="outlined"
+                    color="inherit"
+                    target="_blank"
+                    href={github}
+                    size="small"
+                  >
+                    Github
+                  </Button>
+                  <Button
+                    variant="contained"
+                    color="warning"
+                    target="_blank"
+                    href={demo}
+                    size="small"
+                  >
+                    Live Demo
+                  </Button>
+                </CardActions>
+              </Card>
             </Grid>
           );
         })}

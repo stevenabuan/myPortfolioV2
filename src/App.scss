@@ -16,3 +16,23 @@ body {
   font-family: "Poppins", sans-serif;
   color: #fff;
 }
+
+@media (min-width: 601px) {
+  .skills-container {
+    .front-end,
+    .back-end {
+      justify-self: center;
+      padding-left: 0;
+    }
+    .react,
+    .vue,
+    .html {
+      justify-self: flex-end;
+    }
+    .node,
+    .mongo,
+    .git {
+      justify-self: flex-start;
+    }
+  }
+}

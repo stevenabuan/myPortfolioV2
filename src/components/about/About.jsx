@@ -6,12 +6,12 @@ import React from "react";
 const About = () => {
   return (
     <Container maxWidth="lg">
-      <Grid container marginTop={6} marginBottom={2}>
+      <Grid container marginTop={15} marginBottom={2}>
         <Grid item xs={12} md={6}>
           <Stack marginTop={3} sx={{ fontSize: "1.5rem" }}>
             About me
           </Stack>
-          <Stack textAlign="justify" marginTop={2}>
+          <Stack marginTop={2}>
             Hey there! My name is Steven and I'm a front-end web developer. I
             love designing webpages. I'm focusing now on the front-end using
             React Js with Material UI/Bootstrap. I'm currently exploring other
