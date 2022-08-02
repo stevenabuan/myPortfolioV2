@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Container, Button, TextField, Grid, Stack } from "@mui/material/";
+import {
+  Container,
+  Button,
+  TextField,
+  Grid,
+  Stack,
+  Alert,
+} from "@mui/material/";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -8,6 +16,8 @@ import Socials from "../socials/Socials";
 
 const Contact = () => {
   const form = useRef();
+  const [alert, setAlert] = useState(false);
+  const [alertContent, setAlertContent] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -17,7 +27,9 @@ const Contact = () => {
         "service_ovdh04h",
         "template_ndncvwx",
         form.current,
-        "7D_sJLZlZZz6OEzfc"
+        "7D_sJLZlZZz6OEzfc",
+        setAlertContent("submitted"),
+        setAlert(true)
       )
       .then(
         (result) => {
@@ -154,6 +166,13 @@ const Contact = () => {
             >
               Submit
             </Button>
+            {alert ? (
+              <Alert variant="outlined" severity="success" mb={2}>
+                {alertContent}
+              </Alert>
+            ) : (
+              <></>
+            )}
           </Stack>
         </Grid>
         <Grid item xs={12} md={6}>
