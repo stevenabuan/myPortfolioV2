@@ -20,8 +20,8 @@ const data = [
     title: "Ecommerce website",
     description:
       "Dynamic website using React JS and Material UI for front-end and Firebase for back-end",
-    github: "https://github.com/stevenabuan/kumpas",
-    demo: "https://kumpas.herokuapp.com/",
+    github: "https://github.com/stevenabuan/kagu",
+    demo: "https://kagu-furnitures.netlify.app/",
   },
   {
     id: 2,
