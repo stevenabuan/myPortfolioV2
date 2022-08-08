@@ -12,11 +12,11 @@ const About = () => {
             About me
           </Stack>
           <Stack marginTop={2}>
-            Hey there! My name is Steven and I'm a front-end web developer. I
-            love designing webpages. I'm focusing now on the front-end using
-            React Js with Material UI/Bootstrap. I'm currently exploring other
-            technologies to enhance my skills in which I will showcase my
-            projects below.
+            Hey there! My name is Steven, a passionate front-end developer based
+            in the Philippines. I'm a creative web designer who loves designing
+            webpages. I'm currently learning React Js with Material UI. I'm also
+            exploring other technologies to enhance my skills in which I will
+            showcase my projects below.
           </Stack>
           <Stack marginTop="1rem">
             Here are the technologies I've been working with recently:

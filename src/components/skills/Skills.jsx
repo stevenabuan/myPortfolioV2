@@ -1,12 +1,14 @@
 import { Box } from "@mui/material";
-import { FaReact, FaVuejs, FaGitAlt } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
 import {
+  SiReact,
   SiMongodb,
   SiMaterialui,
   SiBootstrap,
   SiJavascript,
   SiHtml5,
   SiNodedotjs,
+  SiCss3,
 } from "react-icons/si";
 
 const Skills = () => {
@@ -22,22 +24,22 @@ const Skills = () => {
         Front-end
       </Box>
       <Box className="react" justifySelf="center" gridRow="2/3">
-        <FaReact size={30} />
+        <SiReact size={30} />
       </Box>
       <Box className="vue" justifySelf="center" gridRow="3/4">
-        <FaVuejs size={30} />
+        <SiJavascript size={30} />
       </Box>
       <Box justifySelf="center" gridColumn="2/3" gridRow="2/3">
-        <SiJavascript size={30} />
+        <SiMaterialui size={30} />
       </Box>
       <Box className="html" justifySelf="center" gridRow="4/5">
         <SiHtml5 size={30} />
       </Box>
       <Box justifySelf="center" gridColumn="2/3" gridRow="3/4">
-        <SiMaterialui size={30} />
+        <SiBootstrap size={30} />
       </Box>
       <Box justifySelf="center" gridColumn="2/3" gridRow="4/5">
-        <SiBootstrap size={30} />
+        <SiCss3 size={30} />
       </Box>
       <Box
         className="back-end"
