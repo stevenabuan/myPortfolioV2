@@ -1,69 +1,54 @@
-import { Box } from "@mui/material";
-import { FaGitAlt } from "react-icons/fa";
+import { Box, Stack } from "@mui/material";
+import { FaGitAlt, FaSass, FaHtml5, FaCss3, FaVuejs } from "react-icons/fa";
 import {
   SiReact,
   SiMongodb,
   SiMaterialui,
   SiBootstrap,
   SiJavascript,
-  SiHtml5,
   SiNodedotjs,
-  SiCss3,
+  SiFirebase,
+  SiGithub,
+  SiFigma,
+  SiPostman,
+  SiHeroku,
+  SiNetlify,
 } from "react-icons/si";
 
 const Skills = () => {
   return (
-    <Box
-      className="skills-container"
-      gridTemplateColumns="repeat(3, 1fr)"
-      gridTemplateRows="repeat(4, 1fr)"
-      sx={{ display: "grid", fontSize: "1.5rem" }}
-      marginY={2}
-    >
-      <Box className="front-end" paddingLeft={2} gridColumn="1/3" gridRow="1/2">
-        Front-end
-      </Box>
-      <Box className="react" justifySelf="center" gridRow="2/3">
-        <SiReact size={30} />
-      </Box>
-      <Box className="vue" justifySelf="center" gridRow="3/4">
-        <SiJavascript size={30} />
-      </Box>
-      <Box justifySelf="center" gridColumn="2/3" gridRow="2/3">
-        <SiMaterialui size={30} />
-      </Box>
-      <Box className="html" justifySelf="center" gridRow="4/5">
-        <SiHtml5 size={30} />
-      </Box>
-      <Box justifySelf="center" gridColumn="2/3" gridRow="3/4">
-        <SiBootstrap size={30} />
-      </Box>
-      <Box justifySelf="center" gridColumn="2/3" gridRow="4/5">
-        <SiCss3 size={30} />
-      </Box>
-      <Box
-        className="back-end"
-        paddingRight={2}
-        justifySelf="flex-end"
-        gridColumn="2/4"
-        gridRow="1/2"
-      >
-        Back-end
-      </Box>
-      <Box className="node" justifySelf="center" gridColumn="3/4" gridRow="2/3">
-        <SiNodedotjs size={30} />
-      </Box>
-      <Box
-        className="mongo"
-        justifySelf="center"
-        gridColumn="3/4"
-        gridRow="3/4"
-      >
-        <SiMongodb size={30} />
-      </Box>
-      <Box className="git" justifySelf="center" gridColumn="3/4" gridRow="4/5">
-        <FaGitAlt size={30} />
-      </Box>
+    <Box>
+      <Stack marginTop={3} sx={{ fontSize: "1.5rem" }}>
+        Technologies
+      </Stack>
+      <Stack marginTop={2}>
+        <Box sx={{ display: "flex" }}>
+          <p style={{ marginRight: "1rem" }}>Frontend</p>
+          <SiReact size={30} style={{ marginRight: "1rem" }} />
+          <SiMaterialui size={30} style={{ marginRight: "1rem" }} />
+          <SiJavascript size={30} style={{ marginRight: "1rem" }} />
+          <FaVuejs size={30} style={{ marginRight: "1rem" }} />
+          <FaHtml5 size={30} style={{ marginRight: "1rem" }} />
+          <FaCss3 size={30} style={{ marginRight: "1rem" }} />
+          <SiBootstrap size={30} style={{ marginRight: "1rem" }} />
+          <FaSass size={30} />
+        </Box>
+        <Box sx={{ display: "flex", marginTop: "1rem" }}>
+          <p style={{ marginRight: "1rem" }}>Backend</p>
+          <SiNodedotjs size={30} style={{ marginRight: "1rem" }} />
+          <SiMongodb size={30} style={{ marginRight: "1rem" }} />
+          <SiFirebase size={30} style={{ marginRight: "1rem" }} />
+        </Box>
+        <Box sx={{ display: "flex", marginTop: "1rem", marginBottom: "1rem" }}>
+          <p style={{ marginRight: "0.5rem" }}>Other tools</p>
+          <FaGitAlt size={30} style={{ marginRight: "1rem" }} />
+          <SiGithub size={30} style={{ marginRight: "1rem" }} />
+          <SiFigma size={30} style={{ marginRight: "1rem" }} />
+          <SiPostman size={30} style={{ marginRight: "1rem" }} />
+          <SiNetlify size={30} style={{ marginRight: "1rem" }} />
+          <SiHeroku size={30} />
+        </Box>
+      </Stack>
     </Box>
   );
 };
