@@ -1,6 +1,6 @@
 import { Box, Button } from "@mui/material";
 import "animate.css";
-import cv from "../../assets/ABUAN-CV.pdf";
+import cv from "../../assets/steven_abuan_cv.pdf";
 
 const Cta = () => {
   return (
